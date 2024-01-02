@@ -4,24 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Landing Page</title>
-</head>
+    <title>Parallax</title>
 <body>
+    <header>
+        <a href="#" class="logo">SUNSET</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="https://www.linkedin.com/in/gagansg/">LinkedIn</a></li>
+            <li><a href="https://gagansg007.github.io/portfolio/">Portfolio</a></li>
+            <li><a href="https://github.com/GaganSG007">Github</a></li>
+        </ul>
+    </header>
     <section>
-        <div class="container">
-            <nav>
-                <h1>LOGO</h1>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Sign Up</a></li>
-                    <li><a href="">Login</a></li>
-                </ul>
-            </nav>
-            <div class="article"></div>
-            <h1>Govt. Website</h1>
-        </div>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Sunset</h2>
+        <a href="#sec" id="btn">Golden Hour</a>
+        <img src="mountains_front.png" id="mountains_front">
     </section>
+    <div class="sec" id="sec">
+        <h2>SUNSET</h2>
+        <p><p1>Sunset is a magical moment when the sun dips below the horizon, painting the sky with a palette of warm colors. The sky turns into a canvas of orange, pink, and purple hues, creating a breathtaking view that is both calming and awe-inspiring. As the sun sets, the world seems to slow down, and the hustle and bustle of the day fades away. It’s a time to reflect on the day that has passed and to look forward to the night that is yet to come. Watching the sunset is a reminder that even though the day may have been challenging, 
+            there is always beauty to be found in the world around us. So take a moment to pause, breathe, and enjoy the beauty of the sunset.</p1>
+        <br><br>
+        Sunset is a natural phenomenon that occurs when the sun disappears below the horizon due to the Earth’s rotation. It is a beautiful and awe-inspiring moment that has been celebrated in art, literature, and music for centuries. The exact time of sunset varies depending on the viewer’s position on Earth, specified by latitude and longitude, altitude, and time zone 1.
+            <br><br>
+        The colors of the sky during sunset are a result of the scattering of light by the Earth’s atmosphere. As the sun sets, its light has to travel through more of the atmosphere to reach the viewer’s eyes. This causes the shorter blue wavelengths of light to scatter more, leaving behind the longer red and orange wavelengths that give the sky its warm hues 1.
+            <br><br>
+        Sunset is also a time of day when many animals become active. Nocturnal animals such as bats, owls, and fireflies start their day as the sun sets, while diurnal animals such as deer and rabbits prepare to rest for the night 2.
+            <br><br>
+        In many cultures, sunset is a time for reflection and meditation. It is a moment to pause and appreciate the beauty of the world around us. In Hinduism, sunset is a time for prayer and meditation, while in Judaism, it marks the beginning of the Sabbath 34.
+            <br><br>
+        Sunset is also a popular time for outdoor activities such as picnics, hiking, and photography. Many photographers consider sunset to be the “golden hour” for taking pictures, as the warm light creates a beautiful and flattering effect on their subjects .
+    <br><br>Sunset is a beautiful and awe-inspiring moment that has been celebrated in art, literature, and music for centuries. Studies show that appreciating natural beauty, such as a sunset, may boost emotional well-being, increase generosity, and enhance life satisfaction 
+    <br><br>
+    In conclusion, sunset is a magical moment that has captivated humans for centuries. It is a time to reflect, appreciate, and celebrate the beauty of the world around us.</p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.left = value * 0.5 + 'px';
+            mountains_front.style.left = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.left = value * 0.5 + 'px';
+        })
+    </script>
 </body>
 </html>
